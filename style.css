@@ -4,7 +4,7 @@
   --primaryColor: #fff;
   --navColor1: #9e38bd;
   --navColor2: #aa3e39;
-  --navColor3: #cec216;
+  --navColor3: #64a3df;
   --navColor4: #236267;
   --navColor5: #2c8437;
 }
@@ -38,6 +38,49 @@ nav ul {
   margin: 0;
   padding: 0;
   height: 100vh;
+}
+
+nav,
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav li a {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  top: 45%;
+  letter-spacing: 4px;
+  text-align: center;
+  display: block;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+}
+
+nav li a::before {
+  content: '';
+  width: 25vw;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 47.5%;
+  background-color: #fff;
+  opacity: 0;
+}
+
+nav li a:hover::before {
+  opacity: 1;
 }
 
 nav li:nth-of-type(1) {
