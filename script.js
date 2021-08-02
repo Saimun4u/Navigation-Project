@@ -10,6 +10,17 @@ const nav5 = document.getElementById('nav-5');
 
 function toggleNav(){
     menuBars.classList.toggle('change');
+    //Toggle Menu  Active
+    overlay.classList.toggle('overlay-active');
+    if (overlay.classList.contains('overlay-active')){
+        //Animate in overlay
+        overlay.classList.add('overlay-slide-right');
+        overlay.classList.remove('overlay-slide-left');
+    }else{
+        //Animate out overlay
+        overlay.classList.add('overlay-slide-left');
+        overlay.classList.remove('overlay-slide-right');
+    }
 }
 
 //Event Listeners
