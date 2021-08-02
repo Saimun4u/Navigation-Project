@@ -114,6 +114,8 @@ nav li:nth-of-type(5) {
   background-color: var(--navColor5);
 }
 
+/* Slide in animation with delay for each nav item   */
+
 /* --- Menu Bars ------------------------------------ */
 
 .menu-bars {

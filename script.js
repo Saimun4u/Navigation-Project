@@ -14,12 +14,12 @@ function toggleNav(){
     overlay.classList.toggle('overlay-active');
     if (overlay.classList.contains('overlay-active')){
         //Animate in overlay
-        overlay.classList.add('overlay-slide-right');
         overlay.classList.remove('overlay-slide-left');
+        overlay.classList.add('overlay-slide-right');
     }else{
         //Animate out overlay
-        overlay.classList.add('overlay-slide-left');
         overlay.classList.remove('overlay-slide-right');
+        overlay.classList.add('overlay-slide-left');
     }
 }
 
