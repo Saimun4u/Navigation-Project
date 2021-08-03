@@ -7,8 +7,17 @@ const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
 const navItems = [nav1,nav2,nav3,nav4,nav5];
 
-//Toggle Nav Function
+//Control Navigation Animation
 
+function navAnimation(direction1, direction2){
+    navItems.forEach((nav, i)=>{
+        // console.log(`slide-${direction1}-${i+1}`, `slide-${direction2}-${i+1}`)
+        nav.classList.replace(`slide-${direction1}-${i+1}`, `slide-${direction2}-${i+1}`);
+    }
+    )
+}
+
+//Toggle Nav Function
 function toggleNav(){
     menuBars.classList.toggle('change');
     //Toggle Menu  Active
@@ -27,10 +36,7 @@ function toggleNav(){
 }
 
 //Event Listeners
-
 menuBars.addEventListener('click', toggleNav);
-nav1.addEventListener('click', toggleNav);
-nav2.addEventListener('click', toggleNav);
-nav3.addEventListener('click', toggleNav);
-nav4.addEventListener('click', toggleNav);
-nav5.addEventListener('click', toggleNav);
+navItems.forEach((nav)=>{
+    nav.addEventListener('click', toggleNav)
+})
